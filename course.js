@@ -3,12 +3,12 @@
  */
 var express = require('express');
 var app = express();
-app.get('/',function (req,res) {
+app.get('/model/:courseName',function (req,res) {
 
-    var myData=["red","blue","green"];
-    res.render('login.ejs', {
-        data: myData
-    });
+    
+    res.render('model.ejs',{
+        data:req.params.courseName
+    })
     res.end();
 });
 
